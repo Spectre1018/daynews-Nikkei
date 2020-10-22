@@ -7,19 +7,19 @@ import datetime
 import jpholiday
 
 
-TOKEN = 'NzY4NDE0NzM3NTc4MDY1OTUw.X5AH_Q.ymUUXC0PIbgtBSk4MMQ6o-WWJ98'
+TOKEN = ''
 
-CHANNNEL = "768414931905019904" 
+CHANNNEL = "" 
 
 client = discord.Client()
-
+key =''
 
 @client.event
 async def on_ready():
     channel = client.get_channel(int(CHANNNEL))
     print('complete set up.')
 
-    indeta = requests.get("http://newsapi.org/v2/top-headlines?country=jp&apiKey=f291901a86e44b7a8742012b541a3d97")
+    indeta = requests.get("http://newsapi.org/v2/top-headlines?country=jp&apiKey="+key)
 
 
     w_deta = indeta.json()
@@ -62,5 +62,4 @@ async def on_ready():
 
 
 
-# Botの起動とDiscordサーバーへの接続
 client.run(TOKEN)
