@@ -4,7 +4,7 @@ import requests
 import json
 import discord
 import datetime
-import jpholiday
+
 
 
 TOKEN = ''
